@@ -65,7 +65,7 @@ color:white
 }
 .but:hover{
     cursor: pointer;
-    background-color: rgb(61, 60, 60);
+    background-color: rgb(124, 120, 120);
 }
 @media (max-width: 600px) {
   .slider-track {
