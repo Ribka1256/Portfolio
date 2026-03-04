@@ -1,0 +1,101 @@
+
+.par {
+    width: 100%;
+    max-width: 1000px; /* Adjust based on your design */
+    margin: 0 auto;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Makes it "snap" to cards */
+    scrollbar-width: none; /* Hides scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hides scrollbar for IE/Edge */
+     display: flex;
+    align-items: flex-start;   /*top align image & lyrics */
+    gap: 30px;                 /* space between image & lyrics */
+    margin-bottom: 10px;
+    background-color:white;
+    text-align: center;
+    max-width: 170vh;
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px;
+}
+
+/* Hides scrollbar for Chrome/Safari */
+
+
+/* The long row holding the cards */
+.slider-track {
+ display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+
+}
+.slider-track::-webkit-scrollbar { display: none; }
+.para{
+  flex: 0 0 calc(33.33% - 14px); 
+  scroll-snap-align: start;
+  background: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 15px;
+  box-sizing: border-box;
+  max-width: 400px;
+  border-radius: 20px;
+   color: var(--accent-text);
+   color: black;
+   box-shadow: 5px 5px 15px;
+}
+img{
+    display: flex;
+    text-align: center;
+    max-width: 350px;
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px ;
+
+
+}
+.but{
+font-size: 1.4rem;
+padding: 10px 10px;
+border-radius: 30px;
+background-color: black;
+color:white
+}
+.but:hover{
+    cursor: pointer;
+    background-color: rgb(61, 60, 60);
+}
+@media (max-width: 600px) {
+  .slider-track {
+    flex-direction: row;
+  }
+
+  .slider-track .para {
+    max-height: none;
+  }
+}
+.proH1{
+    font-size: 3rem;
+    margin: auto;
+    padding: 50px 50px;
+    text-align: center;
+    
+}
+.contact-section {
+    padding: 100px 20px;
+    background-color: var(--bg-color);
+    animation-name: slideDown 3s ease-in-out initial;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

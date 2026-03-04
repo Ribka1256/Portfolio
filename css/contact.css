@@ -1,0 +1,188 @@
+/* ===== Contact Section Styles ===== */
+.contact-section {
+    padding: 100px 20px;
+    background-color: var(--bg-color);
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr; /* Form is slightly wider */
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+/* --- Left Column: Contact Cards --- */
+.contact-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    background: var(--nav-bg); /* Uses theme variable */
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 15px var(--shadow-color);
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--shadow-color);
+    border-color: var(--text-color);
+}
+
+.card-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--bg-color);
+    color: var(--text-color);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-right: 20px;
+    border: 1px solid var(--border-color);
+    transition: 0.3s;
+}
+
+.contact-card:hover .card-icon {
+    background: var(--text-color);
+    color: var(--bg-color); /* Invert colors on hover */
+}
+
+.card-info h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 4px;
+}
+
+.card-info p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.card-arrow {
+    margin-left: auto;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.contact-card:hover .card-arrow {
+    transform: translateX(5px);
+    color: var(--text-color);
+}
+
+/* --- Right Column: Form --- */
+.contact-form-wrapper {
+    background: var(--nav-bg);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 40px var(--shadow-color);
+}
+
+.form-header {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-form-wrapper input,
+.contact-form-wrapper textarea {
+    width: 100%;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    border-radius: 10px;
+    color: var(--text-color);
+    font-family: inherit;
+    font-size: 0.95rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+.contact-form-wrapper input:focus,
+.contact-form-wrapper textarea:focus {
+    border-color: var(--text-color);
+    box-shadow: 0 0 0 2px var(--shadow-color);
+}
+
+.contact-btn {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+/* --- Responsive --- */
+@media (max-width: 992px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr; /* Stack vertically on tablet/mobile */
+        gap: 50px;
+    }
+    
+    .contact-form-wrapper {
+        padding: 30px;
+    }
+}
+
+
+.section-header {
+    text-align: center;          /* Centers text inside */
+    display: flex;               /* Uses Flexbox for alignment */
+    flex-direction: column;      /* Stacks Title and Subtitle vertically */
+    align-items: center;         /* Centers them horizontally */
+    width: 100%;                 /* Ensures it spans full width */
+    margin-bottom: 50px;         /* Spacing below the header */
+}
+
+.section-subtitle {
+    text-align: center;          /* Ensures the specific text is centered */
+    margin: 10px auto 0 auto;    /* Centers the block and adds small top margin */
+    max-width: 600px;            /* Prevents it from getting too wide on huge screens */
+    display: block;
+}
+
+/* ===== Footer Styles ===== */
+.footer {
+    background-color: var(--bg-color); /* Matches page background */
+    border-top: 1px solid var(--border-color); /* Subtle separation line */
+    padding: 30px 0;
+    text-align: center;
+    margin-top: auto; /* Pushes to bottom if content is short */
+}
+
+.footer p {
+    color: var(--text-muted); /* Uses your muted text variable */
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+/* Optional: Slight hover effect on the name */
+.footer p:hover {
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
